@@ -1,0 +1,36 @@
+.item1{
+    background-color: blue;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    margin : 5px;
+    text-align: center;
+    align-content: center;
+}
+.item2{
+    background-color: red;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    margin : 5px;
+    text-align: center;
+    align-content: center;
+}
+.item3{
+    background-color: yellow;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    margin : 5px;
+    text-align: center;
+    align-content: center;
+}
+.item4{
+    background-color: green;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    margin : 5px;
+    text-align: center;
+    align-content: center;
+}

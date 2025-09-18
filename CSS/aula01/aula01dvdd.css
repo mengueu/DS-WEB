@@ -1,0 +1,76 @@
+/* Funções básicas do CSS para estilizar elementos HTML: 
+
+    color: Define a cor do texto.
+    font-size: Define o tamanho da fonte.
+    font-family: Define a família da fonte.
+    text-align: Define o alinhamento do texto (left, center, right).
+    margin: Define a margem ao redor do elemento.
+    padding: Define o espaçamento interno do elemento.
+    border: Define a borda ao redor do elemento.
+    background-color: Define a cor de fundo do elemento.
+    border-radius: Define o arredondamento das bordas.
+    box-shadow: Adiciona sombra ao redor do elemento.
+    transition: Adiciona transições suaves para mudanças de propriedades.
+    hover: Aplica estilos quando o mouse está sobre o elemento.
+
+    background:
+    linear-gradient: Cria um fundo com gradiente de cores.
+    radial-gradient: Cria um fundo com gradiente radial.
+    conic-gradient: Cria um fundo com gradiente cônico.
+    
+*/
+
+/* *: Seletor universal - Aplica a todos os elementos */
+
+h1:hover { 
+    color: red; /* Cor do texto */
+    font-size: 36px; /* Tamanho da fonte */
+    font-family: 'Helvetica Neue', sans-serif; /* Família da fonte */
+    text-align: center; /* Alinhamento do texto */
+    margin: 20px; /* Margem ao redor do elemento */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid rgb(255, 90, 0); /* Borda ao redor do elemento */
+    background-color: white; /* Cor de fundo */
+    border-radius: 100px; /* Bordas arredondadas */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: background-color 1s, color 1s; /* Transição suave para mudanças de cor */
+}
+
+p{
+    color: blue;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Seletor de classe - Aplica a todos os elementos com a classe especificada: . */
+.bolha {
+    color: red;
+}
+
+/* Seletor de ID - Aplica a um elemento com o ID especificado: # */
+#henry {
+    color: green;
+}
+
+body {
+    background: radial-gradient(circle, blue, white); /* Fundo com gradiente */
+}
+
+/* Manipulando links com CSS:
+
+    text-decoration: none - Remove o sublinhado 
+    text-decoration: underline - Adiciona sublinhado
+    text-decoration: overline - Adiciona uma linha acima do texto
+    text-decoration: line-through - Adiciona uma linha no meio do texto
+    text-decoration: blink - Faz o texto piscar (não suportado em todos os navegadores)
+    text-decoration: none underline overline line-through - Combina várias decorações
+*/
+
+a {
+    text-decoration: none;
+    color: blue; }
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+

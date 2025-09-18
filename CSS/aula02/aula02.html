@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula02.css">
+    <title>Aula 02</title>
+
+    <!-- Importar fontes externas: -->
+    <!-- Story Script: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+
+    <!-- Bungee: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Story+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Tipos de Medidas:</h1>
+
+        <table border="1" cellpadding="10" cellspacing="0" align="center" width="70%">
+            <tr>
+                <th colspan="3";>Comparação rápida</th>
+            </tr>
+            <tr align="center">
+              <th>Unidade</th>
+              <th>Base de Cálculo</th>
+              <th>Exemplo (Base = 16px)</th>
+            </tr>
+            <tr align="center">
+              <th>px</th>
+              <td>Absoluta</td>
+              <td>16px = 16px</td>
+            </tr>
+            <tr align="center">
+              <th>em</th>
+              <td>Fonte do pai</td>
+              <td>2em = 32px (se pai = 16px)</td>
+            </tr>
+            <tr align="center">
+              <th>rem</th>
+              <td>Fonte do html</td>
+              <td>2rem = 32px (se html = 16px)</td>
+            </tr>
+            <tr align="center">
+              <th>%</th>
+              <td>Elemento pai</td>
+              <td>150% = 24px (se pai = 16px)</td>
+            </tr>
+        </table>
+
+        <h2>Exemplos:</h2>
+
+        <p class="em1">EM</p>
+        <p class="em2">EM</p>
+
+        <p class="rem1">REM</p>
+        <p class="rem2">REM</p>
+
+        <p class="por1">PERCENTUAL</p>
+        <p class="por2">PERCENTUAL</p>
+
+        <hr>
+
+        <h1>Formatação de Textos no CSS:</h1>
+
+        <p class="form1">1- fonte-family (Definir a família do texto)</p>
+        <p class="form2">2- fonte-size (Definir o tamanho da fonte)</p>
+        <p class="form3">3- font-weight (Definir a espessura da fonte)</p>
+        <p class="form4">4- font-style (Definir o estilo da fonte)</p>
+        <p class="form5">5- text-align (Definir o alinhamento do texto)</p>
+        <p class="form6">6- text-decoration (Definir a decoração do texto)</p>
+        <p class="form7">7- letter-spacing (Definir o espaçamento entre letras)</p>
+        <p class="form8">8- line-height (Definir a altura da linha)</p>
+        <p class="form9">9- word-spacing (Definir o espaçamento entre palavras)</p>
+        <p class="form10">10- text-shadow (Definir a sombra do texto)</p>
+        <p class="form11">11- color (Definir a cor do texto)</p>
+
+        <hr>
+
+        <h1>Importando Fontes:</h1>
+        <p class="fonte1">Fonte importada do Google Fonts</p>
+        <p class="fonte2">Fonte importada do Google Fonts</p>
+        <p class="fonte3">Fonte importada do Google Fonts</p>
+
+        <hr>
+
+        <h1>Formatação de Imagens:</h1>
+        <!--
+            Estrutura básica da tag de imagem:
+            <img src="foto.jpg" alt="Descrição da imagem">
+            src: caminho do arquivo.
+            alt: texto alternativo (acessibilidade + SEO). 
+        -->
+
+        <p>1- Largura e altura (Proporcional)</p>
+        <img src="imagem1.png" alt="imagem1" class="img1">
+
+        <p>2- Borda</p>
+        <img src="imagem2.png" alt="imagem2" class="img2">
+
+        <p>3- Bordas arredondadas</p>
+        <img src="imagem3.png" alt="imagem3" class="img3">
+
+        <p>4- Circular</p>
+        <img src="imagem4.png" alt="imagem4" class="img4">
+
+        <p>5- Sombras</p>
+        <img src="imagem5.png" alt="imagem5" class="img5">
+
+        <p>6- Opacidade e efeitos visuais </p>
+        <img src="imagem6.png" alt="imagem6" class="img6">
+
+        <p>7- Alinhamento (Centralizada)</p>
+        <img src="imagem7.png" alt="imagem7" class="img7">
+
+        <p>8- Imagens responsivas (São as mesmas em diversos dispositivos)</p>
+        <img src="imagem8.png" alt="imagem8" class="img8">
+        
+        <p>9- Filtro de efeitos (Preto e branco antes, depois brilhante)</p>
+        <img src="imagem9.png" alt="imagem9" class="img9">
+        
+        <p>10- Filtro de efeitos (Borrada)</p>
+        <img src="imagem10.png" alt="imagem10" class="img10">
+
+        <hr>
+
+        <h1>Formatação de Tabelas:</h1>
+
+        <table class="table1">
+            <tr>
+                <th colspan="3";>1- Bordas</th>
+            </tr>
+            <tr>
+                <th class="th1">Nome</th>
+                <th class="th1">Idade</th>
+                <th class="th1">Cidade</th>
+            </tr>
+            <tr>
+                <td class="td1">Ana</td>
+                <td class="td1">22</td>
+                <td class="td1">São Paulo</td>
+            </tr>
+            <tr>
+                <td class="td1">João</td>
+                <td class="td1">30</td>
+                <td class="td1">Rio de Janeiro</td>
+            </tr>
+            <tr>            
+                <td class="td1">Carlos</td>
+                <td class="td1">47</td>
+                <td class="td1">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table2">
+            <tr>
+                <th colspan="3";>2- Bordas colapsadas</th>
+            </tr>
+            <tr>
+                <th class="th2">Nome</th>
+                <th class="th2">Idade</th>
+                <th class="th2">Cidade</th>
+            </tr>
+            <tr>
+                <td class="td2">Ana</td>
+                <td class="td2">22</td>
+                <td class="td2">São Paulo</td>
+            </tr>
+            <tr>
+                <td class="td2">João</td>
+                <td class="td2">30</td>
+                <td class="td2">Rio de Janeiro</td>
+            </tr>
+            <tr>            
+                <td class="td2">Carlos</td>
+                <td class="td2">47</td>
+                <td class="td2">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table3">
+            <tr>
+                <th colspan="3";>3- Espaçamento interno e alinhamento</th>
+            </tr>
+            <tr>
+                <th class="th3">Nome</th>
+                <th class="th3">Idade</th>
+                <th class="th3">Cidade</th>
+            </tr>
+            <tr>
+                <td class="td3">Ana</td>
+                <td class="td3">22</td>
+                <td class="td3">São Paulo</td>
+            </tr>
+            <tr>
+                <td class="td3">João</td>
+                <td class="td3">30</td>
+                <td class="td3">Rio de Janeiro</td>
+            </tr>
+            <tr>            
+                <td class="td3">Carlos</td>
+                <td class="td3">47</td>
+                <td class="td3">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table4">
+            <tr>
+                <th colspan="3";>4- Cor de fundo</th>
+            </tr>
+            <tr>
+                <th class="th4">Nome</th>
+                <th class="th4">Idade</th>
+                <th class="th4">Cidade</th>
+            </tr>
+            <tr>
+                <td class="td4">Ana</td>
+                <td class="td4">22</td>
+                <td class="td4">São Paulo</td>
+            </tr>
+            <tr>
+                <td class="td4">João</td>
+                <td class="td4">30</td>
+                <td class="td4">Rio de Janeiro</td>
+            </tr>
+            <tr>            
+                <td class="td4">Carlos</td>
+                <td class="td4">47</td>
+                <td class="td4">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table5">
+            <tr class="tr5">
+                <th colspan="3";>5- Listras (zebra table) - Linhas Pares</th>
+            </tr>
+            <tr class="tr5">
+                <th class="th5">Nome</th>
+                <th class="th5">Idade</th>
+                <th class="th5">Cidade</th>
+            </tr>
+            <tr class="tr5">
+                <td class="td5">Ana</td>
+                <td class="td5">22</td>
+                <td class="td5">São Paulo</td>
+            </tr>
+            <tr class="tr5">
+                <td class="td5">João</td>
+                <td class="td5">30</td>
+                <td class="td5">Rio de Janeiro</td>
+            </tr>
+            <tr  class="tr5">            
+                <td class="td5">Carlos</td>
+                <td class="td5">47</td>
+                <td class="td5">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table8">
+            <tr class="tr8">
+                <th colspan="3";>5- Listras (zebra table) - Linhas Ímpares</th>
+            </tr>
+            <tr class="tr8">
+                <th class="th8">Nome</th>
+                <th class="th8">Idade</th>
+                <th class="th8">Cidade</th>
+            </tr>
+            <tr class="tr8">
+                <td class="td8">Ana</td>
+                <td class="td8">22</td>
+                <td class="td8">São Paulo</td>
+            </tr>
+            <tr class="tr8">
+                <td class="td8">João</td>
+                <td class="td8">30</td>
+                <td class="td8">Rio de Janeiro</td>
+            </tr>
+            <tr  class="tr8">            
+                <td class="td8">Carlos</td>
+                <td class="td8">47</td>
+                <td class="td8">Cerquilho</td>
+            </tr>
+        </table>
+
+        <table class="table6">
+            <tr class="tr6">
+                <th colspan="3";>6- Efeito hover (Passar o mouse em cima)</th>
+            </tr>
+            <tr class="tr6">
+                <th class="th6">Nome</th>
+                <th class="th6">Idade</th>
+                <th class="th6">Cidade</th>
+            </tr>
+            <tr class="tr6">
+                <td class="td6">Ana</td>
+                <td class="td6">22</td>
+                <td class="td6">São Paulo</td>
+            </tr>
+            <tr class="tr6">
+                <td class="td6">João</td>
+                <td class="td6">30</td>
+                <td class="td6">Rio de Janeiro</td>
+            </tr>
+            <tr class="tr6">            
+                <td class="td6">Carlos</td>
+                <td class="td6">47</td>
+                <td class="td6">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+
+        <table class="table7">
+            <tr>
+                <th colspan="3";>7- Largura e altura da tabela</th>
+            </tr>
+            <tr>
+                <th class="th7">Nome</th>
+                <th class="th7">Idade</th>
+                <th class="th7">Cidade</th>
+            </tr>
+            <tr>
+                <td class="td7">Ana</td>
+                <td class="td7">22</td>
+                <td class="td7">São Paulo</td>
+            </tr>
+            <tr>
+                <td class="td7">João</td>
+                <td class="td7">30</td>
+                <td class="td7">Rio de Janeiro</td>
+            </tr>
+            <tr>            
+                <td class="td7">Carlos</td>
+                <td class="td7">47</td>
+                <td class="td7">Cerquilho</td>
+            </tr>
+        </table>
+        <br>
+</body>
+</html>

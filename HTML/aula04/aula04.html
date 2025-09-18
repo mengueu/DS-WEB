@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula 04</title>
+    </head>
+    <body>
+        <center><h1>Aprendendo a fazer Formulários</h1></center>
+        <hr>
+        <br>
+        
+        <form action="processa.php" method="post"></form> 
+        <!-- form: Cria um formulário HTML. -->
+        <!-- action: Especifica o URL para onde os dados do formulário serão enviados quando o formulário for submetido.-->
+        <!-- method: Define o método HTTP a ser usado ao enviar os dados do formulário. -->
+        <!-- get: os dados são anexados à URL. -->
+        <!-- post: os dados são enviados no corpo da solicitação. -->
+
+        <form id="meuFormulario" align="center"> 
+        <!-- id: Atribui um identificador único ao formulário, que pode ser usado para estilização ou manipulação via JavaScript. -->
+
+            <label for="email">E-mail:</label> 
+            <!-- label: Cria um rótulo associado ao campo de entrada com id="email". -->
+            <!-- for: conecta o rótulo ao campo de entrada. -->
+
+            <input style="width: 600px;" type="email" id="email" placeholder="Digite seu email" required>
+            <!-- Input: Campo de entrada onde o usuário pode digitar dados:
+
+                    Texto: <input type="text"> Campo de texto simples.
+                    E-mail: <input type="email"> Validação básica de e-mail.
+                    Senha: <input type="password"> Oculta os caracteres digitados.
+                    Botão: de envio <input type="submit"> Envia o formulário.
+                    Caixa de seleção: <input type="checkbox"> Múltiplas opções.
+                    Botão de rádio: <input type="radio"> Seleção única entre várias.
+                    Arquivo: <input type="file"> Upload de arquivos.
+                    Número: <input type="number"> Entrada numérica com validação.
+                    Data: <input type="date"> Seletor de data.
+            -->
+                
+                <!-- style="width: 600px;": define a largura do campo de entrada. -->
+                <!-- placeholder: "Digite seu email" exibe um texto de dica dentro do campo. -->
+                <!-- required: indica que o campo é obrigatório e deve ser preenchido antes do envio do formulário. -->
+
+            <button type="submit">Enviar</button> 
+            <!-- button: é usado para criar um botão clicável na interface do usuário. -->
+            <!-- "type="submit": define o botão como um botão de envio.-->
+            
+        </form>
+
+
+        <!-- JavaScript para manipulação do formulário: -->
+        <script>
+            document.getElementById('meuFormulario').addEventListener 
+            ('submit', function(event)
+            // document.getElementById('meuFormulario'): Seleciona o formulário pelo seu id.
+            // .addEventListener('submit', function(event) {...}): Adiciona um ouvinte de evento que será executado quando o formulário for enviado.
+
+            {
+                event.preventDefault();
+                alert('Formulário enviado com sucesso!');
+            });
+            // event.preventDefault(): Impede o comportamento padrão do envio do formulário (como recarregar a página).
+            // alert('Formulário enviado com sucesso!'): Exibe uma mensagem de alerta ao usuário indicando que o formulário foi enviado com sucesso.
+
+        </script>
+
+        <br>
+        <hr>
+        
+        <h2>Usando label e input</h2>
+        <form action="processa.php" method="get">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+
+        <form id="formulario3">
+            <input type="radio" id="opcao1" name="escolha" value="1"> 
+            <!-- value define o valor que será enviado ao servidor quando essa opção for selecionada. -->
+
+            <label for="opcao1">Primeira opção</label>
+            <input type="radio" id="opcao2" name="escolha" value="2" checked>
+            <!-- checked indica que essa opção está selecionada por padrão quando o formulário é carregado. -->
+
+            <label for="opcao2">Segunda Opção</label>
+            <br><br>    
+            <input type="checkbox" id="noticias" name="interesses" value="noticias" checked>
+            <label for="noticias">Receber notícias</label>
+            <input type="checkbox" id="promocoes" name="interesses" value="promocoes" checked>
+            <label for="promocoes">Receber promoções</label>
+        </form>
+        <hr>
+        <br>
+
+        <form id="formulario4">
+            <form action="/submit" method="post">
+            <!-- /submit é o endpoint para onde os dados do formulário serão enviados.-->
+        
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="1" max="120" required>
+                </br><br>
+
+                <label>Gênero:</label>
+                <input type="radio" id="masculino" name="genero" value= "masculino" required>
+
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+                </br><br>
+
+                <label>Interesses:</label>
+                <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+                <label for="tecnologia">Tecnologia</label>
+                <input type="checkbox" id="esportes" name="interesses" value="esportes">
+                <label for="esportes">Esportes</label>
+                <input type="checkbox" id="arte" name="interesses" value="arte">
+                <label for="arte">Arte</label>
+                </br><br>
+
+                <label for="cores">Escolha sua cor favorita:</label>
+                <select id="cores" name="cores">
+                    <option value="vermelho">Vermelho</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                </select>
+                <!-- select cria um menu suspenso (dropdown) que permite ao usuário selecionar uma opção entre várias disponíveis. -->
+                <br><br>
+
+                <label for="hobbies">Selecione seus hobbies:</label>
+                <select id="hobbies" name="hobbies" multiple size="4">
+                <!-- multiple: permite que o usuário selecione várias opções ao mesmo tempo. -->
+                <!-- size: define quantas opções são visíveis sem precisar rolar o menu. -->
+
+                    <option value="leitura">Leitura</option>
+                    <option value="musica">Música</option>
+                    <option value="esportes">Esportes</option>
+                    <option value="viagem">Viagem</option>
+                </select>
+                <br><br>
+
+                <label for="carros">Escolha um carro:</label>
+                <select id="carros" name="carros">
+                    <optgroup label="Sedans">
+                    <!-- optgroup: cria um grupo de opções dentro do menu suspenso, permitindo organizar as opções em categorias. -->
+                        <option value="corolla">Toyota Corolla</option>
+                        <option value="civic">Honda Civic</option>
+                    </optgroup>
+                    <optgroup label="SUVs">
+                        <option value="crv">Honda CR-V</option>
+                        <option value="rav4" disabled>Toyota RAV4</option>
+                        <!-- disabled: desabilita essa opção, impedindo que o usuário a selecione. -->
+                    </optgroup>
+                </select>
+                <br><br>
+                <hr>
+
+                <body>
+                    <h2>Escreva um breve resumo sobre você</h2>
+                    <form>
+                        <label for="resumo">Resumo:</label><br>
+                        <textarea id="resumo" name="resumo" rows="6" cols="60" max-length="300" required>
+Sou apaixonado por tecnologia e adoro explorar novas linguagens de programação.
+                        </textarea>
+                        <!-- textarea: Cria uma área de texto multilinha onde o usuário pode digitar um texto mais longo. -->
+                        <!-- rows: Define o número de linhas visíveis na área de texto. -->
+                        <!-- cols: Define o número de colunas visíveis na área de texto. -->   
+                        <!-- max-length: Limita o número máximo de caracteres que o usuário pode digitar. -->
+                    </form>
+                </body>
+
+                <button type="submit">Enviar</button>
+        </form>
+        <hr>
+
+        <br>
+
+
+</html>

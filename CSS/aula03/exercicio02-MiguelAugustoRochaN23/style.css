@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+.cabeçalho {
+    font-family: 'Bungee';
+    font-size: 60px;
+    text-align: left;
+    width: 10000000px;
+    align-items: left;
+    padding: 1px;
+    text-align: left;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: blue; }
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+body {
+    background-image: url('wallpaper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*#6fe5ffed*/
+
+.divbonita {
+    background-color: #6fe5ffed;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+.titulo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    margin: 20px;
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    margin: 20px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333333;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.p1 {
+    display: block;
+    margin: auto;
+    width: 400px;  
+}
+
+table {
+    width: 1000px;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+    margin: auto;
+}
+.table1, .td1, .th1, .td2 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 1000px;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*IMAGENS*/
+
+.sereiasdavila {
+    display: block;
+    margin: 20px auto;
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.santosruim {
+    display: block;
+    margin: 20px auto;
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.santoscampeao {
+    display: block;
+    margin: 20px auto;
+    width: 700px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.santoscampeao {
+    display: block;
+    margin: 20px auto;
+    width: 700px;
+    height: auto;
+    border-radius: 15px;   
+}
+
+.jogodascampeas {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+    height: auto;
+    border-radius: 15px;   
+}
+
+.willian {
+    display: block;
+    margin: 20px auto;   
+    width: 450px;
+    height: auto;
+    border-radius: 15px;   
+}
+
+.adonias {
+    display: block;
+    margin: 20px auto;
+    width: 450px;
+    height: auto;
+    border-radius: 15px;   
+}
+
+.lucas {
+    display: block;
+    margin: 20px auto;
+    width: 450px;
+    height: auto;
+    border-radius: 15px;   
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atividade 03 - Miguel Augusto Rocha</title>
+        <h1><center>Atividade 03 - Exercicio 2</center></h1>
+        <h2><center>Miguel Augusto Rocha N°23</center></h2>
+        <hr>
+    </head>
+    <body>
+        <h2>Formulário de Pesquisa</h2>
+        <form id="Exercicio2" >
+            <!--Usando radio -->
+            <label for="genero">Gênero:</label><br>
+
+            <label for="masculino">
+                <input type="radio" name="genero" id="masculino" required>
+                Masculino
+            </label>
+            <br>
+
+            <label for="feminino">
+                <input type="radio" name="genero" id="feminino">
+                Feminino
+            </label>
+            <br>
+
+            <label for="outro">
+                <input type="radio" name="genero" id="outro">
+                Outro
+            </label>
+            <br><br>
+
+            <!--Usando checkbox -->
+            <label for="interesses">Interesses:</label><br>
+
+            <label for="tecnologia">
+                <input type="checkbox" name="tecnologia" id="tecnologia" checked>
+                Tecnologia
+            </label>
+            <br>
+
+            <label for="esportes">
+                <input type="checkbox" name="esportes" id="esportes">
+                Esportes
+            </label>
+            <br>
+
+            <label for="arte">
+                <input type="checkbox" name="arte" id="arte">
+                Arte
+            </label>
+            <br>
+            
+            <label for="musica">
+                <input type="checkbox" name="musica" id="musica">
+                Música
+            </label>
+            <br>
+            <br>
+
+            <!--Usando select -->
+            <label for="carros">Escolha seu carro favorito:</label><br>
+                <select id="carros" name="carros" multiple required>
+                    <optgroup label="Sedans">
+                        <option value="corolla">Toyota Corolla</option>
+                        <option value="civic">Honda Civic</option>
+                    </optgroup>
+                    <optgroup label="SUVs">
+                        <option value="CR-V">Honda CR-V</option>
+                        <option value="RAV4">Toyota RAV4</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>

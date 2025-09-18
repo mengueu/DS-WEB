@@ -1,0 +1,205 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* Tipos de Medidas:
+
+    px = pixels (tamanho fixo)
+    em = tamanho relativo ao elemento pai
+    rem = tamanho relativo ao elemento raiz (html)
+    % = porcentagem do elemento pai
+*/
+
+.em1 {
+    font-size: 16px;
+}
+.em2 {
+    font-size: 2em; /* 2 x 16px = 32px */
+}
+.rem1 {
+    font-size: 1rem; /* 1 x 16px = 16px */
+}
+.rem2 {
+    font-size: 2rem; /* 2 x 16px = 32px */
+}
+.por1 {
+    font-size: 150%; /* 1.5 x 16px = 24px */
+}
+.por2 {
+    font-size: 200%; /* 2 x 16px = 32px */
+}
+
+/* Tipos de formatação de texto:
+
+    font-family: define a fonte do texto
+    font-size: define o tamanho da fonte
+    font-weight: define a espessura da fonte
+    font-style: define o estilo da fonte (normal, italic, oblique)
+    text-align: define o alinhamento do texto (left, right, center, justify)
+    text-decoration: define a decoração do texto (underline, overline, line-through, none)
+    letter-spacing: define o espaçamento entre letras
+    line-height: define a altura da linha
+    word-spacing: define o espaçamento entre palavras
+    text-shadow: define a sombra do texto
+*/
+
+.form1 {
+    font-family: Arial, sans-serif;
+}
+.form2 {
+    font-size: 10px;
+}
+.form3 {
+    font-weight: bold;
+}
+.form4 {
+    font-style: italic;
+}
+.form5 {
+    text-align: center;
+}
+.form6 {
+    text-decoration: underline;
+}
+.form7 {
+    letter-spacing: 2px;
+}
+.form8 {
+    line-height: 2;
+}
+.form9 {
+    word-spacing: 10px;
+}
+.form10 {
+    text-shadow: 2px 2px 5px gray;
+}
+.form11 {
+    color: #0000ff
+}
+
+/* Importando fontes pelo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.fonte1 {
+    font-family: Lobster, cursive;
+}
+
+.fonte2 {
+    font-family: Story Script;
+}
+
+.fonte3 {
+    font-family: Bungee;
+}
+
+/* Formatação de Imagens: 
+    
+    width: define a largura da imagem
+    height: define a altura da imagem
+    border: define a borda da imagem
+    border-radius: define o raio das bordas da imagem (para deixar arredondada)
+    box-shadow: define a sombra da imagem
+    opacity: define a opacidade da imagem (0 = transparente, 1 = opaco)
+    display: define o tipo de exibição da imagem (block, inline, inline-block, none)
+    margin: define a margem da imagem
+    filter: define filtros para a imagem (grayscale, sepia, blur, brightness, contrast, invert, saturate, hue-rotate)
+*/
+
+.img1 {
+    width: 200px;
+    height: auto; /* Mantém a proporção da imagem */
+}
+.img2 {
+    border: 5px solid black;
+}
+.img3 {
+    border-radius: 10px;
+}
+.img4 {
+    border-radius: 50%; /* Deixa a imagem circular */
+}
+.img5 {
+    box-shadow: 5px 5px 10px gray;
+}
+.img6 {
+    opacity: 0.5; /* Deixa a imagem semi-transparente */
+}
+.img6:hover {
+    opacity: 1; /* Deixa a imagem normal ao passar o mouse */
+}
+.img7 {
+    display: block; /* Faz a imagem ocupar toda a largura disponível */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+.img8 {
+    max-width: 100%; /* Faz a imagem ser responsiva */
+    height: auto;
+}
+.img9 {
+    filter: grayscale(100%); /* Deixa a imagem em preto e branco */
+}
+.img9:hover {
+    filter: brightness(120%); /* clareia ao passar o mouse */
+}
+.img10 {
+    filter: blur(5px);
+}
+
+/* Formatação de Tabelas: 
+
+    border: define a borda da tabela
+    border-collapse: define se as bordas da tabela serão colapsadas (collapse) ou separadas (separate)
+    width: define a largura da tabela
+    height: define a altura da tabela
+    text-align: define o alinhamento do texto nas células (left, right, center)
+    padding: define o espaçamento interno das células
+    margin: define a margem da tabela
+    background-color: define a cor de fundo da tabela ou das células
+    color: define a cor do texto da tabela ou das células
+*/
+
+.table1, .th1, .td1 {
+    border: 1px solid black;
+}
+
+.table2, .th2, .td2 {
+    border: 1px solid black;
+    border-collapse: collapse; /* junta as bordas */
+}
+
+.th3, .td3 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px; /* espaço interno */
+    text-align: center; /* centralizar texto */
+}
+
+.th4 {
+    background-color: #333;
+    color: white;
+}
+.td4 {
+    background-color: #f2f2f2;
+}
+
+/* Para linhas pares: */
+.tr5:nth-child(even) {
+    background-color: #f1ff77;
+}
+/* Para linhas ímpares: */
+.tr8:nth-child(odd) {
+    background-color: #f1ff77;}
+
+.tr6:hover {
+    background-color: #ddd;
+}
+
+.table7 {
+    border: 1px solid black;
+    width: 100%; /* ocupa toda a largura */
+}
+.th7, .td7 {
+    border: 1px solid black;
+    height: 40px; /* altura das células */
+}

@@ -1,0 +1,76 @@
+.box1{
+    background-color: blue;
+}
+.box2{
+    background-color: blue;
+    height: 100px;
+}
+.box3{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+.box4{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+.box5{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.box6{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin : 100px 200px 100px 100px; /*margin: margem em volta do elemento*/
+    /* top right bottom left */
+}
+.box7{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center; /*alinha o conteudo no centro horizontalmente*/
+    align-content: center; /*alinha o conteudo no centro verticalmente*/
+} 
+.box8{
+    display: inline-block;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin : 10px 10px 10px 10px;
+    text-align: center;
+    align-content: center;
+}
+.box9{
+    display: inline-block;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin : 10px 10px 10px 10px;
+    text-align: center; 
+    align-content: center;
+}
+
+/*
+    O margin: 0 auto faz uma conta matemática (tamanho da tela - tamanho da div/2) 
+    para saber o quanto deve haver para cada lado para centralizar e ajusta, porém,
+    seus filhos não herdam essa propriedade, então é necessário colocar também neles,
+    definindo uma largura fixa, e o margin: 0 auto (para centralizar).
+*/
+.divcentralizada, .conteudo1, .conteudo2{
+    margin: 0 auto;
+    width: 100px;
+}

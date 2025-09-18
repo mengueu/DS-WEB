@@ -1,0 +1,26 @@
+.c1{
+    background-color: blue;
+    width: 200px;
+    height: 250px;
+    padding: 150px;
+    margin: 100px;
+    display: inline-block;
+}
+
+.c2{
+    background-color: red;
+    width: 200px;
+    height: 250px;
+    padding: 1px;
+    margin: 1px;
+    display: inline-block;
+}
+
+.c3{
+    background-color: green;
+    width: 200px;
+    height: 250px;
+    padding: 90px;
+    margin: 10px;
+    display: inline-block;
+}

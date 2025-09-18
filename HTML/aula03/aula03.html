@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula 03</title>
+    </head>
+    <body>
+        <center><h1>Aprendendo a usar tabelas</h1></center>
+        <hr>
+        <h2>Tabela simples:</h2>
+        <table> <!-- cria uma tabela -->
+            <tr> <!-- define uma linha da tabela -->
+                <th>ALUNO</th> <!-- cabeçalho da coluna -->
+                <th>SEXO</th>
+                <th>IDADE</th>
+                <th>SITUAÇÃO</th>
+            </tr>
+            <tr align="center">
+                <td align="left">Miguel</td> <!-- célula -->
+                <td>Masculino</td>
+                <td>17</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr align="center">
+                <td align="left">Pipi</td>
+                <td>Masculino</td>
+                <td>16</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr align="center">
+                <td align="left">Gustavo</td>
+                <td>Masculino</td>
+                <td>16</td>
+                <td>Aprovado</td>
+            </tr>
+        </table>
+
+        
+
+        <br>
+        <h2>Tabela com atributos:</h2>
+        <table border="1" cellpadding="3" cellspacing="0" width="50%" align="center" summary="Alunos aprovados">
+        <!-- border Define a largura da borda da tabela-->
+        <!-- cellpadding Define o espaço entre o conteúdo da célula e a borda da célula -->
+        <!-- cellspacing Define o espaço entre as células da tabela -->
+        <!-- width Define a largura da tabela -->
+        <!-- height Define a altura da tabela-->
+        <!-- align Define o alinhamento da tabela na página -->
+        <!-- summary Fornece uma descrição da tabela para leitores de tela -->
+
+            <caption style="font-size: 150%;">Alunos aprovados</caption> <!-- Adiciona um título descritivo acima da tabela -->
+            <tr>
+                <th>NOME</th>
+                <th>IDADE</th>
+                <th>SEXO</th>
+                <th>SITUAÇÃO</th>
+            </tr>
+            <tr align="center">
+                <td>Miguel</td>
+                <td>17</td>
+                <td>Masculino</td>
+                <td style="color: green">Aprovado</td>
+            </tr>
+            <tr align="center">
+                <td>Pietro</td>
+                <td>16</td>
+                <td>Masculino</td>
+                <td style="color: green;">Aprovado</td>
+            </tr>
+            <tr align="center">
+                <td>Gustavo</td>
+                <td>16</td>
+                <td>Masculino</td>
+                <td style="color: red;">Reprovado</td>
+            </tr>
+            <tr align="center">
+                <td>Maria Luiza</td>
+                <td>16</td>
+                <td>Feminino</td>
+                <td style="color: red;">Reprovado</td>
+            </tr>
+
+        </table> 
+        <br><br>
+        <hr>
+
+        <h1><center>Cowlspam e Rowspan</center></h1>
+        <hr>
+
+        <h3>Colspan</h3>
+        <table border="1" cellspacing="0">
+            <tr>
+                <th colspan="2">Informações Pessoais</th> <!-- colspan permite que a célula ocupe várias colunas -->
+            </tr>
+            <tr>
+                <td>Nome</td>
+                <td>Maria</td>
+            </tr>
+        </table>
+
+        <br>
+        <h3>Rowspan</h3>
+        <table border="1" cellspacing="0">
+            <tr>
+            <th rowspan="2">Produto</th> <!-- rowspan permite que a célula ocupe várias linhas -->
+            <td>Notebook</td>
+            </tr>
+            <tr>
+            <td>R$ 3.000,00</td>
+            </tr>
+            </table>
+
+        <hr>
+        <center><h1>Formatação de Texto</h1></center>
+        <hr>
+        <p>eu disse <b>agora</b>, não depois</p> <!-- <b>substitui o texto por negrito</b> -->  
+        <p>eu disse <strong>agora</strong>, não depois</p> <!-- <strong>substitui o texto por negrito, mas com mais ênfase</strong> -->
+        <p>eu disse <i>agora</i>, não depois</p> <!-- <i>substitui o texto por itálico</i> -->
+        <p>eu disse <em>agora</em>, não depois</p> <!-- <em>substitui o texto por itálico, mas com mais ênfase</em> -->
+        <p>eu disse <u>agora</u>, não depois</p> <!-- <u>substitui o texto por sublinhado</u> -->
+        <p>eu disse <ins>agora</ins>, não depois</p> <!-- <ins>substitui o texto por sublinhado (geralmente usado para indicar inserção)</ins> -->
+        <p>eu disse <mark>agora</mark>, não depois</p> <!-- <mark>substitui o texto por destaque</mark> -->
+        <p>eu disse <small>agora</small>, não depois</p> <!-- <small>substitui o texto por menor</small> -->
+        <p>eu disse <del>agora</del>, não depois</p> <!-- <del>substitui o texto por tachado</del> -->
+
+        <ul> <!-- cria uma lista não ordenada -->
+            <li>Maçã</li>
+            <li>Banana</li>
+            <li>Laranja</li>
+        </ul>
+
+        <ol> <!-- cria uma lista ordenada -->
+            <li>Maçã</li>
+            <li>Banana</li>
+            <li>Laranja</li>
+        </ol>
+    </body>
+</html>
