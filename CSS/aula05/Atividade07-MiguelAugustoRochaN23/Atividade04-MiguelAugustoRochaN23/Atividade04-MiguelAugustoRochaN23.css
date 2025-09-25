@@ -1,0 +1,10 @@
+.menu{
+    height: 60px;
+    background-color: orange;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+.conteudo{
+    font-size: 100px;
+}

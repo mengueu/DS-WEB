@@ -1,0 +1,50 @@
+/* Position: 
+    static - Ele segue o fluxo normal da página, sem deslocamentos.
+    relative - O elemento continua ocupando o espaço normal, mas pode ser deslocado com top , left , right , bottom .
+    absolute - O elemento sai do fluxo normal da página. É posicionado em relação ao primeiro ancestral com position ≠ static. Se não houver, usa como referência o <body> .
+    fixed - Fica fixo na tela, mesmo quando há rolagem.
+    sticky - O elemento se comporta como relative , mas quando chega a um limite definido, "gruda" na tela como fixed.
+    top - distância do topo
+    bottom - distância da base
+    left - distância da esquerda
+    right - distância da direita
+*/
+.menu {
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sticky {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    margin: 300px;
+}
+.caixa {
+    width: 100px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+    top: 50px;
+}
+.caixa-absoluta {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.absolute {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}

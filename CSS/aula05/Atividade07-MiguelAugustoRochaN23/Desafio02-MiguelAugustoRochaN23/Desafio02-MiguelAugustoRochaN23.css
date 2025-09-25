@@ -1,0 +1,69 @@
+.m{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 60px;
+    text-align: center;
+    align-content: center;
+}
+.i{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 120px;
+    text-align: center;
+    align-content: center;
+}
+.g{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 180px;
+    text-align: center;
+    align-content: center;
+}
+.u{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 240px;
+    text-align: center;
+    align-content: center;
+}
+.e{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 300px;
+    text-align: center;
+    align-content: center;
+}
+.l{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    margin: 360px;
+    text-align: center;
+    align-content: center;
+}
+.a{
+    height: 1000px;
+}
