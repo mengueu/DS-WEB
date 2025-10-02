@@ -1,0 +1,207 @@
+body{
+    background-color:rgb(238, 80, 80);
+}
+.menu {
+    width: 100%;
+    height: 90px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(117, 22, 22);
+}
+.link{
+    text-decoration: underline;
+}
+.link:hover{
+    color: rgb(91, 1, 1);
+    text-decoration: underline;
+}
+.preco{
+    color: rgb(91, 1, 1);
+}
+.pedir{
+    text-decoration: underline;
+}
+.pedir:hover{
+    color: rgb(91, 1, 1);
+    text-decoration: underline;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.cardapio{
+    color: black;
+}
+
+.titulomenu{
+    color: white;
+    width: 300px;
+    height: 60px;
+    font-size: 2em;
+    font-family: Bungee;
+    margin: 0px 0px 0px 10px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+}
+.cardapiomenu{
+    width: 100px;
+    height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    margin: left;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    margin: 0px 0px 0px 780px;
+    border-radius: 20px;
+    background-color: rgb(167, 38, 38);
+}
+.reservamenu{
+    width: 100px;
+    height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    background-color: rgb(167, 38, 38);
+}
+.promocaomenu{
+    width: 100px;
+    height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    background-color: rgb(167, 38, 38);
+}
+.divpaicardapio{
+    margin-top: 200px;
+    margin-left: 35%;
+}
+
+.prato1{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+.divprato1:hover{
+    scale: 1.15;
+}
+.descricao1{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+}
+
+
+.prato2{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divprato2:hover{
+    scale: 1.15;
+}
+.descricao2{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    align-content: top;
+    align-items: center;
+}
+
+
+.prato3{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divprato3:hover{
+    scale: 1.15;
+}
+.descricao3{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    align-content: top;
+    align-items: center;
+}
+
+
+.prato4{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divprato4:hover{
+    scale: 1.15;
+}
+.descricao4{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    align-content: top;
+    align-items: center;
+}
+
+
+.prato5{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divprato5:hover{
+    scale: 1.15;
+}
+.descricao5{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    align-content: top;
+    align-items: center;
+}
+
+
+.prato6{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 10%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.divprato6:hover{
+    scale: 1.15;
+}
+.descricao6{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    align-content: top;
+    align-items: center;
+}

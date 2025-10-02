@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservas.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Story+Script&display=swap" rel="stylesheet">
+
+    <title>Reservas</title>
+</head>
+<body>
+    <div class="menu">
+        <table>
+            <th>
+                <div class="titulomenu"><a href="index.html">SABOR & ARTE</a></div>
+            </th>
+                <th>
+                    <div class="cardapiomenu"><a href="cardapio.html">CARDÁPIO</a></div>
+                </th>
+                <th><div class="promocaomenu"><a href="promocao.html">PROMOÇÃO</a></div>
+                </th>
+                <th><div class="reservamenu"><a href="reservas.html">RESERVAS</a></div>
+                </th>
+        </table>
+
+        <div class="reserva">
+            <h1>Faça sua reserva!</h1>
+        </div>
+
+        <div class="formulario">
+            <form action="algumlugar.php" method="post" class="formularioF">
+                
+                <label for="email">E-mail:</label>
+                <input type="email" class="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                <br><br>
+                
+                <label for="telefone" id="telefone">Telefone:</label>
+                <input type="number" class="telefone" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                <br><br>
+
+                <label for="nome" id="nome">Nome:</label>
+                <input type="text"class="nome"  id="nome" name="nome" placeholder="Digite seu nome aqui..." required>
+                <br><br>
+
+                <label for="pessoas" id="pessoas">Quantidade de pessoas:</label>
+                <input type="number" class="pessoas" min="1" id="pessoas" name="pessoas" placeholder="Digite a quantidade de pessoas que vão comer..." required>
+                <br><br>
+                
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" class="feedback" name="feedback" placeholder="Escreva seu feedback aqui..."></textarea><br>
+                <br>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+        
+
+    </div>
