@@ -1,0 +1,182 @@
+/* Página Principal de Alunos */
+
+.bodyinicio {
+    background-image: url('../fundo.jpg');
+    background-size: cover;
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #d6a966;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.voltar:hover {
+    background-color: #c07134;
+    transform: translateY(-3px);
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+}
+th{
+    background-color: #853a00;
+    color: white;
+}
+td{
+    background-color: #f4e1c1;
+}
+
+.cadastro{
+    background-color: #e3bd84;
+    border: 2px solid #853a00;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: 270px;
+    margin: 20px;  
+}
+
+.cadastrados{
+    background-color: #e3bd84;
+    width: 500px;        
+    height: 420px;       
+    overflow-y: auto;      
+    border: 2px solid #853a00;
+    padding: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+    color: #853a00;
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+}
+
+input[id="nome"], input[id="cidade"]{
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #853a00;
+    border-radius: 4px;
+    margin: 0;
+}
+input[type="submit"] {
+    background-color: #853a00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #c07134;
+}
+
+label{
+    width: 180px;
+    display: inline-block;
+    color: #853a00;
+}
+
+
+/* Editar de Alunos */
+
+.editar{
+    background-color: #c0ab34;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.editar:hover {
+    background-color: #a68a2a;
+}
+.deletar{
+    background-color: #d63434;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.deletar:hover {
+    background-color: #a82828;
+}
+
+.bodyeditar{
+    background-image: url('/biblioteca/elementos/fundo.jpg');
+    background-size: cover;
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.atuais{
+    background-color: #e3bd84;
+    border: 2px solid #853a00;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: 150px;
+    margin: 20px;  
+}
+
+.novos{
+    background-color: #e3bd84;
+    border: 2px solid #853a00;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: 300x;
+    margin: 20px; 
+}
+
+.titulo{
+    text-align: center;
+    color: #853a00;
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 45px;
+    background-color:#e3bd84;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: solid 2px #853a00; 
+}
+
+.editar1{
+    width: 98%;
+}
+.editar2{
+    width: 95%;
+    color: black;
+}

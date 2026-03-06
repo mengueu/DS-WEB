@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03 - Miguel Augusto Rocha N23</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cadastro">
+        <h1>Cadastro de Alunos</h1>
+
+        <form id="formCadastro">
+            
+            <div class="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="formulario">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+            </div>
+
+            <div class="formulario">
+                <label for="ra">RA:</label>
+                <input type="number" id="ra" name="ra" required>
+            </div>
+
+            <div class="formulario">
+                <label for="telefone">Telefone:</label>
+                <input type="number" id="telefone" name="telefone" placeholder="(+XX) XX XXXXX-XXXX" required>
+            </div>
+
+            <div class="formulario">
+                <label for="turma">Turma:</label>
+                <select id="turma" name="turma" class="turma-select" required>
+                    <option value="Fundamental I: 1°ano">Fundamental I: 1°ano</option>
+                    <option value="Fundamental I: 2°ano">Fundamental I: 2°ano</option>
+                    <option value="Fundamental I: 3°ano">Fundamental I: 3°ano</option>
+                    <option value="Fundamental I: 4°ano">Fundamental I: 4°ano</option>
+                    <option value="Fundamental I: 5°ano">Fundamental I: 5°ano</option>
+
+                    <option value="Fundamental II: 6°ano">Fundamental II: 6°ano</option>
+                    <option value="Fundamental II: 7°ano">Fundamental II: 7°ano</option>
+                    <option value="Fundamental II: 8°ano">Fundamental II: 8°ano</option>
+                    <option value="Fundamental II: 9°ano">Fundamental II: 9°ano</option>
+
+                    <option value="Ensino Médio: 1°ano">Ensino Médio: 1°ano</option>
+                    <option value="Ensino Médio: 2°ano">Ensino Médio: 2°ano</option>
+                    <option value="Ensino Médio: 3°ano">Ensino Médio: 3°ano</option>
+                </select>
+
+                <select id="turmaAB" name="turmaAB" class="turmaAB-select" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="cadastrarAluno()">Cadastrar</button>
+
+        </form>
+    </div>
+
+    <div class="cadastrados">
+        <h2>Lista de Alunos Cadastrados</h2>
+        <ul id="listaAlunos"></ul>
+    </div>
+
+    <p></p>
+</body>
+<script src="script.js"></script>
+</html>

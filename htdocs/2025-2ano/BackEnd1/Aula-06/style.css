@@ -1,0 +1,26 @@
+.cadastro{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    width: fit-content;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.cadastrados{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    width: fit-content;
+    margin: auto;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+    text-align: center;
+}

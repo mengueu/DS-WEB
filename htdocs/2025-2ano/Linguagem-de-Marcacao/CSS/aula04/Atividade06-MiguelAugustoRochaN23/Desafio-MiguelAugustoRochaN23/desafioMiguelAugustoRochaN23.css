@@ -1,0 +1,102 @@
+.divpai{
+    text-align: center;
+}
+.div1{
+    width: 100px;
+    height: 60px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div2{
+    width: 100px;
+    height: 60px;
+    background-color: gray;
+    border: dotted black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div3{
+    width: 100px;
+    height: 60px;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div4{
+    width: 100px;
+    height: 60px;
+    background-color: yellow;
+    border: dotted black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div5{
+    width: 100px;
+    height: 60px;
+    background-color: green;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div6{
+    width: 100px;
+    height: 60px;
+    background-color: purple;
+    border: dotted black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div7{
+    width: 100px;
+    height: 60px;
+    background-color: orange;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div8{
+    width: 100px;
+    height: 60px;
+    background-color: pink;
+    border: dotted black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.div9{
+    width: 100px;
+    height: 60px;
+    background-color: brown;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
