@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Semáforo</title>
+</head>
+<body>
+    <h2>Semáforo - Grupo 8</h2>
+    
+    <div class="semaforo">
+        <div id="vermelho" class="luzvermelha"></div>
+        <div id="amarelo" class="luzamarela"></div>
+        <div id="verde" class="luzverde"></div>
+    </div>
+    <br>
+    <button class="iniciar" onclick="iniciar()">Iniciar</button>
+    <button class="parar" onclick="parar()">Parar</button>
+    <br><br>
+    
+    <button onclick="velocidade('rapido')">Rápida</button>
+    <button onclick="velocidade('medio')">Normal</button>
+    <button onclick="velocidade('lento')">Lenta</button>
+
+    <p id="VelocidadeAtual">Velocidade Atual: Normal</p>
+
+    <script src="controle.js"></script>
+</body>
+</html>
