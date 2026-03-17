@@ -10,20 +10,17 @@ class Arduino {
         exec($cmdConfig);
         exec($cmd);
     }
-    public function iniciar(){ 
+    public function lento(){ 
         $this->enviarComando("0"); 
     }
-    public function devagar(){ 
+    public function moderado(){ 
         $this->enviarComando("1"); 
     }
-    public function moderado(){ 
+    public function rapido(){ 
         $this->enviarComando("2"); 
     }
-    public function rapido(){ 
-        $this->enviarComando("3"); 
-    }
     public function parar(){ 
-        $this->enviarComando("4");
+        $this->enviarComando("3"); 
     }
 }
 ?>
