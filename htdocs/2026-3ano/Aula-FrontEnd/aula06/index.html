@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validações JavaScript</title>
+</head>
+
+<body>
+
+    <h2>Formulário de Validação</h2>
+
+    <form id="form">
+
+        <!-- Nome -->
+        <label>Nome:</label><br>
+        <input type="text" id="nome" required><br><br>
+
+        <!-- Email -->
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <!-- Idade -->
+        <label>Idade:</label><br>
+        <input type="text" id="idade"><br><br>
+
+        <!-- Senha -->
+        <label>Senha:</label><br>
+        <input type="password" id="senha"><br><br>
+
+        <!-- Confirmar Senha -->
+        <label>Confirmar Senha:</label><br>
+        <input type="password" id="confirmarSenha"><br><br>
+
+        <!-- País -->
+        <label>País:</label><br>
+        <select id="pais">
+            <option value="">Selecione</option>
+            <option value="br">Brasil</option>
+            <option value="us">EUA</option>
+        </select><br><br>
+
+        <!-- Data -->
+        <label>Data:</label><br>
+        <input type="date" id="data"><br><br>
+
+        <!-- Termos -->
+        <label>
+            <input type="checkbox" id="termos">
+            Aceito os termos
+        </label><br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    
+</body>
+<script src="script.js"></script>
+</html>
