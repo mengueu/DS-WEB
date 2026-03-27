@@ -52,3 +52,10 @@
 24-03-2026 20:07:39 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
 24-03-2026 20:09:19 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
 24-03-2026 20:09:37 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 12:42:13 | GET | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/index.php
+27-03-2026 19:07:42 | GET | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 19:07:44 | GET | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 19:10:46 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 19:10:47 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 19:17:10 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias
+27-03-2026 19:17:13 | POST | 2026-3ano/Aula-BackEnd2/aula07/cafeteria-api/categorias

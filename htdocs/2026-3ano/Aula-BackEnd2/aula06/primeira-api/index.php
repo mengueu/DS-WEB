@@ -2,7 +2,8 @@
 
 header('Content-Type: application/json'); // Define o tipo de conteúdo da resposta como JSON
 header('Access-Control-Allow-Origin: *'); // Permite requisições de qualquer origem (CORS)
-header('Access-Control-Allow-Methods: GET, POST'); // Define os métodos HTTP permitidos
+header('Access-Control-Allow-Headers: Content-Type'); // Permite receber Content-Type no header
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Define os métodos HTTP permitidos
 
 $method = $_SERVER['REQUEST_METHOD']; // Captura o método HTTP da requisição atual (GET, POST, etc.)
 // echo $method; - Imprime o método (no caso GET)
@@ -12,7 +13,7 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); // Extrai apenas o cam
 $path = trim($path, '/');// 'trim' limpa a string e o parâmetro '/' remove a barra inicial
 
 $segments = explode('/', $path); // 'explode' remove o parâmetro '/' e toda vez que encontra uma barra, divide em segmentos (cada segmento é uma array)
-// echo $segments[3]; - Exibe a 3° posição do array
+// echo $segments[3]; - Exibe a 3°(2) posição do array
 
 $endpoint = $segments[4] ?? ''; // Pega o endpoint solicitado
 /* Este comando: 

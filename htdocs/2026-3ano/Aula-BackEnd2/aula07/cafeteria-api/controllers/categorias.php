@@ -20,7 +20,7 @@ switch($method){
     // GET /categorias/1
     // -------------------------------------------------------
     case 'GET':
-        
+        $database->executeQuery("INSERT INTO categorias(nome) VALUES (:nome)", [":nome" => $nome]); // mudar
         break;
     // -------------------------------------------------------
     // POST /categorias
