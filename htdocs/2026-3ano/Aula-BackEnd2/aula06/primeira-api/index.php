@@ -32,7 +32,7 @@ switch ($endpoint) {
     case 'hello':
         echo json_encode([
             'status' => 'success',
-            'message' => 'Ola! A API esta funcionando.'
+            'message' => 'Olá! A API está funcionando!'
         ]);
         break;
 

@@ -1,5 +1,6 @@
 var divResposta = document.getElementById("resposta")
 
+// GET
 var botaoHello = document.getElementById("botaoHello")
 botaoHello.addEventListener("click", requisicaoHello)
 
@@ -8,11 +9,16 @@ async function requisicaoHello(){
     var requisicao = await fetch('http://localhost/2026-3ano/Aula-BackEnd2/aula06/primeira-api/hello') 
     var resposta = await requisicao.json()
     // await serve para forçar o programa 'esperar' um tempo para processar o comando
-    console.log(resposta)
+    
+    console.log("GET:")
+    console.log("Status: '" + resposta.status + "'")
+    console.log("Mensagem: '" + resposta.message + "'")
+    console.log("")
 
     divResposta.innerHTML = "Status: " + resposta.status + "<br> Mensagem: " + resposta.message
 }
 
+// POST
 var botaoEcho = document.getElementById("botaoEcho")
 botaoEcho.addEventListener("click", requisicaoEcho)
 
@@ -25,7 +31,11 @@ async function requisicaoEcho(){
         body: JSON.stringify({message : echo}) // Vou pegar o conteúdo do input e transformar em informação para enviar
     }) 
     var resposta = await requisicao.json()
-    console.log(resposta.echo.message)
+    
+    console.log("POST:")
+    console.log("Status: '" + resposta.status + "'")
+    console.log("Mensagem: '" + resposta.echo.message + "'")
+    console.log("")
 
     divResposta.innerHTML = "Status: " + resposta.status + "<br> Mensagem: " + resposta.echo.message
 }
