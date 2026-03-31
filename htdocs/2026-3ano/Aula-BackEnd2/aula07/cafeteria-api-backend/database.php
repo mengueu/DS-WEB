@@ -1,11 +1,12 @@
 <?php
+
 class Database extends PDO
 {
-    private $DB_NAME = 'cafeteria';
-    private $DB_USER = 'root';
+    private $DB_NAME     = 'cafeteria';
+    private $DB_USER     = 'root';
     private $DB_PASSWORD = '';
-    private $DB_HOST = '127.0.0.1';
-    private $DB_PORT = 3306;
+    private $DB_HOST     = '127.0.0.1';
+    private $DB_PORT     = 3306;
 
     public function __construct()
     {
