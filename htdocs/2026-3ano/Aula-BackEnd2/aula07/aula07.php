@@ -1,4 +1,5 @@
 <?php
+echo "Ver código";
 /*# Primeira API
 
 Vamos iniciar a construção da nossa primeira API utilizando PHP Puro, também chamado de **PHP Vanilla**.

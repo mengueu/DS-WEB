@@ -1,6 +1,6 @@
 <?php
 
-require_once 'database.php';
+require_once 'src/connection/database.php';
 $database = new Database();
 
 $method   = $_SERVER['REQUEST_METHOD'];
@@ -8,8 +8,8 @@ $path     = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $path     = trim($path, '/');
 $segments = explode('/', $path);
 
-if (isset($segments[5])) {
-    $id = $segments[5];
+if (isset($segments[5])) { // 2026-3ano/Projetos/cafeteria-api/backend/produtos
+    $id = $segments[5]; //      [0]       [1]        [2]         [3]     [4]
 } else {
     $id = null;
 }
@@ -33,7 +33,7 @@ switch($method){
         if(!$nome){
             echo json_encode([
                 'status' => 'error',
-                'message' => 'Campo nome não informado'
+                'message' => 'Campo não informado'
             ]);
             break;
         }
@@ -45,13 +45,9 @@ switch($method){
         http_response_code(201);
         echo json_encode([
             'status' => 'success',
-            'message' => 'Categoria cadastrada com sucesso',
+            'message' => 'Categoria CADASTRADA com sucesso',
             'idCategoria' => $database->lastInsertId()
         ]);
-        
-        break;
-
-    case 'PUT':
         
         break;
 
@@ -77,7 +73,8 @@ switch($method){
  
         echo json_encode([
             'status'  => 'success',
-            'message' => 'Categoria removida com sucesso.'
+            'message' => 'Categoria REMOVIDA com sucesso.',
+            'idCategoria' => $id
         ]);
         break;
 
@@ -88,6 +85,4 @@ switch($method){
             'message' => 'Método não permitido.'
         ]);
 }
-
-
 ?>

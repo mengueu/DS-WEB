@@ -1,4 +1,5 @@
 <?php
+echo "Ver código";
 /*
     O que significa API?
 - API significa Application Programming Interface -> Interface de Programação de Aplicações.

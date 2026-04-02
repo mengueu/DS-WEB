@@ -1,9 +1,6 @@
 /*
 var divResposta = document.getElementById("resposta")
-
-
 var botaoHello = document.getElementById("botaoHello");
-
 botaoHello.addEventListener("click", endpointHello)
 
 async function endpointHello() {
@@ -15,9 +12,7 @@ async function endpointHello() {
     
 }
 
-
 var botaoEcho = document.getElementById("botaoEcho");
-
 botaoEcho.addEventListener("click", endpointEcho)
 
 async function endpointEcho() {
@@ -35,5 +30,4 @@ async function endpointEcho() {
     console.log(resposta)
     divResposta.innerHTML = resposta.status + "<br>" + resposta.echo
 }
-
 */
