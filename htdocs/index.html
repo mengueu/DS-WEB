@@ -9,71 +9,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <aside class="sidebar">
+    <!-- Fundo Aurora Vivo -->
+    <div class="aurora-bg"></div>
 
-        <div class="logo">SENAI</div>
-
-        <nav class="menu">
-
-            <div class="grupo">
-                <p class="menu-titulo">Principal</p>
-                <a href="" class="menu-item">Início</a>
-            </div>
-
-            <div class="grupo">
-                <p class="menu-titulo">3º Ano</p>
-                <ul><a href="2026-3ano/Aula-FrontEnd/frontend.html" class="menu-item">Aulas FrontEnd</a></ul>
-                <ul><a href="2026-3ano/Aula-BackEnd2/backend2.html" class="menu-item">Aulas BackEnd 2</a></ul>
-            </div>
-
-            <div class="grupo">
-                <p class="menu-titulo">2º Ano</p>
-                <ul><a href="2025-2ano/BackEnd1/backend1.html" class="menu-item">BackEnd 1</a></ul>
-                <ul><a href="2025-2ano/Linguagem-de-Marcacao/linguagem.html" class="menu-item">Linguagem de Marcação</a></ul>
-            </div>
-
-            <div class="grupo">
-                <p class="menu-titulo">Outros</p>
-                <ul><a href="" class="menu-item">Projetos</a></ul>
-                <ul><a href="" class="menu-item">Sobre</a></ul>
-            </div>
-
-        </nav>
-
-    </aside>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="https://instagram.com/miguelito_rochaa" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://linkedin.com/in/miguel-augusto-rocha" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/mengueu" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <button class="tema" onclick="alternarTema()">Alterar Tema</button>
+    </nav>
 
     <main class="main">
 
-        <div class="header">
-            <div>
-                <h1>Desenvolvimento WEB - Miguel Augusto Rocha</h1>
-                <p>Portfólio técnico • Aulas e Atividades</p>
-            </div>
+        <header class="hero-expressive">
+            <h2>Desenvolvimento WEB</h2>
+            <p>Miguel Augusto Rocha</p>
+        </header>
 
-            <button class="tema" onclick="alternarTema()"></button>
-        </div>
-
-        <section class="cards">
-
-            <div class="card" onclick="window.location.href='2025-2ano/materias2.html'">
-                <div class="ano">2025</div>
-                <h2>2º Ano E.M.</h2>
-                <p>• Linguagem de Marcação: Iniciação com HTML e CSS</p>
-                <p>• BackEnd 1: Iniciação com PHP</p>
-            </div>
-
-            <div class="card" onclick="window.location.href='2026-3ano/materias3.html'">
+        <section class="cards center-large">
+            <a href="2026-3ano/index.html" class="card fade-in">
                 <div class="ano">2026</div>
-                <h2>3º Ano E.M.</h2>
-                <p>• BackEnd 2: Programação Orientada a Objetos</p>
-                <p>• FrontEnd: Iniciação com JavaScript</p>
-            </div>
+                <h3>3°Ano - Ensino Médio<br>2°Ano - Técnico em Desenvolvimento de Sistemas</h3><br>
+                <p>Navegue pelas disciplinas do 3º ano. Estudos imersivos com Arquitetura de BackEnd, APIs Complexas e Componentização no FrontEnd.</p>
+            </a>
 
+            <a href="2025-2ano/index.html" class="card fade-in" style="animation-delay: 0.1s">
+                <div class="ano">2025</div>
+                <h3>2°Ano - Ensino Médio<br>1°Ano - Técnico em Desenvolvimento de Sistemas</h3><br>
+                <p>O início de tudo. Explore os conceitos essenciais da Linguagem de Marcação (HTML/CSS) e os primeiros contatos da lógica de BackEnd com PHP.</p>
+            </a>
         </section>
 
     </main>
