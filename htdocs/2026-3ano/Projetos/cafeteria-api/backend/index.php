@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { // O navegador envia um "OPTIONS
     exit();
 }
 
-// O Switch olha para o $segments[2] e decide qual arquivo de controle (controller) deve carregar
+// O Switch olha para o $segments[4] e decide qual arquivo de controle (controller) deve carregar
 switch ($endpoint) {
     case 'categorias':
         require_once 'src/controllers/categorias.php';
@@ -36,6 +36,10 @@ switch ($endpoint) {
 
     case 'pedidos':
         require_once 'src/controllers/pedidos.php';
+        break;
+
+    case 'pedido_itens':
+        require_once 'src/controllers/pedido_itens.php';
         break;
 
     default: // Caso o usuário digite algo que não existe, retorna erro 404

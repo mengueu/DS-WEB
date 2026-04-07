@@ -1,13 +1,13 @@
 var divResposta = document.getElementById("resposta")
-var inputNome   = document.getElementById("nome")   
+var inputNome   = document.getElementById("nome")
 
 document.addEventListener('DOMContentLoaded', getCategorias)
 document.getElementById('botaoEnviar').addEventListener('click', postCategoria)
 
 async function getCategorias() {
-    var requisicao = await fetch("http://localhost/2026-3ano/Projetos/cafeteria-api/backend/categorias")
+    var requisicao = await fetch("http://localhost/2026-3ano/Aula-BackEnd2/aula07/cafeteria-api-backend/categorias")
     var resposta = await requisicao.json()
-    console.log("Status de conexão (GET): '" + resposta.status + "'")
+    console.log(resposta)
 
     const linhas = resposta.data.map(item => `
         <tr>
@@ -29,19 +29,15 @@ async function getCategorias() {
                     <th>Opções</th>
                 </tr>
             </thead>
-            <tbody>${linhas}</tbody>
+            <tbody>
+                ${linhas}
+            </tbody>
         </table>
     `;
 }
 
 async function postCategoria() {
-
-    if (inputNome.value.trim() === "") {
-        alert("Por favor, digite o nome da categoria.");
-        return;
-    }
-
-    var requisicao = await fetch("http://localhost/2026-3ano/Projetos/cafeteria-api/backend/categorias", {
+    var requisicao = await fetch("http://localhost/2026-3ano/Aula-BackEnd2/aula07/cafeteria-api-backend/categorias", {
         method:  "POST",
         headers: {
             "Content-Type": "application/json" 
@@ -49,7 +45,7 @@ async function postCategoria() {
         body: JSON.stringify({ nome: inputNome.value })
     })
     var resposta = await requisicao.json()
-    console.log("Status de conexão (POST): '" + resposta.status + "'\nMensagem: '" + resposta.message + "' ID: " + resposta.idCategoria)
+    console.log(resposta)
     
     inputNome.value = ""
 
@@ -57,11 +53,12 @@ async function postCategoria() {
 }
 
 async function deleteCategoria(id) {
-    var requisicao = await fetch("http://localhost/2026-3ano/Projetos/cafeteria-api/backend/categorias/" + id, {
+    var requisicao = await fetch("http://localhost/2026-3ano/Aula-BackEnd2/aula07/cafeteria-api-backend/categorias/" + id, {
         method: "DELETE"
-    }) 
+    })
+ 
     var resposta = await requisicao.json()
-    console.log("Status de conexão (DELETE): '" + resposta.status + "'\nMensagem: '" + resposta.message + "' ID: " + resposta.idCategoria)
+    console.log(resposta)
  
     getCategorias()
 }

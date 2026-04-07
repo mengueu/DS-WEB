@@ -15,7 +15,7 @@ document.getElementById('botaoEnviar').addEventListener('click', postProdutos) /
 document.addEventListener('DOMContentLoaded', async() => {
     var requisicao = await fetch("http://localhost/2026-3ano/Projetos/cafeteria-api/backend/categorias")
     var resposta = await requisicao.json()
-    var opcoes = ""
+    var opcoes = "<option value=''>Selecione uma Categoria</option>"
 
     listaCategorias = resposta.data // Armazena os dados para uso futuro na tabela de produtos.
 
@@ -60,15 +60,19 @@ async function getProdutos() {
                     <th>Opções</th>
                 </tr>
             </thead>
-            <tbody>
-                ${linhas}
-            </tbody>
+            <tbody>${linhas}</tbody>
         </table>
     `;
 }
 
 // POST: Enviando novos dados (através do método POST) ao banco de dados
 async function postProdutos() {
+
+    if (inputNome.value.trim() === "" || inputPreco.value.trim() === "" || selectCategorias.value.trim() === "" ) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
     var requisicao = await fetch("http://localhost/2026-3ano/Projetos/cafeteria-api/backend/produtos", {
         method: "POST", // Define que estamos enviando dados.
         headers: {
@@ -97,7 +101,7 @@ async function deleteProdutos(id) {
     })
  
     var resposta = await requisicao.json()
-    console.log("Status de conexão (POST): '" + resposta.status + "'\nMensagem: '" + resposta.message + "' ID: " + resposta.idProduto)
+    console.log("Status de conexão (DELETE): '" + resposta.status + "'\nMensagem: '" + resposta.message + "' ID: " + resposta.idProduto)
  
     getProdutos()
 }
