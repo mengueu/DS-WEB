@@ -1,5 +1,5 @@
 <?php
-    require_once 'C:\USBWebserver-2ano\USBWebserver v8.6\root\biblioteca\elementos\conexaobiblioteca.php';
+    require_once '../conexaobiblioteca.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if (isset($_POST['nomealuno']) && isset($_POST['emailaluno']) && isset($_POST['telefonealuno'])) {
@@ -13,7 +13,7 @@
             $resultado = mysqli_query($conexao, $sql);
 
             if ($resultado) {
-                header("Location: /biblioteca/aluno.php");
+                header("Location: ../../aluno.php");
             } else {
                 echo "Erro ao editar: " . mysqli_error($conexao);
                 exit;
@@ -38,13 +38,13 @@
             $linha = mysqli_fetch_assoc($resultado);
         } else {
             echo "Usuário não encontrado.";
-            header("Location: /biblioteca/elementos/aluno/editaraluno.php");
+            header("Location: editaraluno.php");
             exit;
         }
     ?>
 
     <div class="voltar">
-        <a href="/biblioteca/aluno.php">Voltar</a>
+        <a href="../../aluno.php">Voltar</a>
     </div>
       
     <h1 class="titulo">Edição de Alunos:</h1>

@@ -6,13 +6,13 @@
 
         if (!empty($ano) && !empty($titulo)) {
 
-            require_once 'C:\USBWebserver-2ano\USBWebserver v8.6\root\biblioteca\elementos\conexaobiblioteca.php';
+            require_once '../conexaobiblioteca.php';
 
             $sql = "INSERT INTO livro (titulo, anopublicacao) VALUES ('$titulo', '$ano')";
             $resultado = mysqli_query($conexao, $sql);
 
             echo "Usuário cadastrado com sucesso!";
-            header("Location: /biblioteca/livro.php");
+            header("Location: ../../livro.php");
 
         } else {
             echo "Por favor, preencha todos os campos corretamente.";

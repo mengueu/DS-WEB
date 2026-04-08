@@ -6,13 +6,13 @@
 
         if (!empty($nacionalidade) && !empty($nome)) {
 
-            require_once 'C:\USBWebserver-2ano\USBWebserver v8.6\root\biblioteca\elementos\conexaobiblioteca.php';
+            require_once '../conexaobiblioteca.php';
 
             $sql = "INSERT INTO autor (nomeautor, nacionalidadeautor) VALUES ('$nome', '$nacionalidade')";
             $resultado = mysqli_query($conexao, $sql);
 
             echo "Usuário cadastrado com sucesso!";
-            header("Location: /biblioteca/autor.php");
+            header("Location: ../../autor.php");
 
         } else {
             echo "Por favor, preencha todos os campos corretamente.";

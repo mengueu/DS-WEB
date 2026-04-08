@@ -6,13 +6,13 @@
 
         if (!empty($cidade) && !empty($nome)) {
 
-            require_once 'C:\USBWebserver-2ano\USBWebserver v8.6\root\biblioteca\elementos\conexaobiblioteca.php';
+            require_once '../conexaobiblioteca.php';
 
             $sql = "INSERT INTO editora (nomeeditora, cidadesede) VALUES ('$nome', '$cidade')";
             $resultado = mysqli_query($conexao, $sql);
 
             echo "Usuário cadastrado com sucesso!";
-            header("Location: /biblioteca/editora.php");
+            header("Location: ../../editora.php");
 
         } else {
             echo "Por favor, preencha todos os campos corretamente.";
