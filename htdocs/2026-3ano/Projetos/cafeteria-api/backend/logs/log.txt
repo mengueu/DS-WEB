@@ -1181,3 +1181,9 @@ s
 08-04-2026 01:37:19 | GET | 2026-3ano/Projetos/cafeteria-api/backend/pedidos
 08-04-2026 01:37:20 | GET | 2026-3ano/Projetos/cafeteria-api/backend/produtos
 08-04-2026 01:37:20 | GET | 2026-3ano/Projetos/cafeteria-api/backend/pedido_itens/2
+10-04-2026 16:29:06 | GET | 2026-3ano/Projetos/cafeteria-api/backend/pedidos
+10-04-2026 16:29:08 | GET | 2026-3ano/Projetos/cafeteria-api/backend/produtos
+10-04-2026 16:29:08 | GET | 2026-3ano/Projetos/cafeteria-api/backend/categorias
+10-04-2026 16:29:08 | GET | 2026-3ano/Projetos/cafeteria-api/backend/produtos
+10-04-2026 16:29:11 | GET | 2026-3ano/Projetos/cafeteria-api/backend/pedidos
+10-04-2026 16:29:12 | GET | 2026-3ano/Projetos/cafeteria-api/backend/categorias
