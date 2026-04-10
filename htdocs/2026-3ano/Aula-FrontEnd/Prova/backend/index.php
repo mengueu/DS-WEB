@@ -11,7 +11,7 @@ $path   = trim($path, '/');
 $segments = explode('/', $path);
 
 $log = date('Y-m-d H:i:s') . " | $method | $path\n";
-file_put_contents('log.txt', $log, FILE_APPEND);
+file_put_contents('src/log.txt', $log, FILE_APPEND);
 
 if ($method === 'OPTIONS') {
     http_response_code(200);
