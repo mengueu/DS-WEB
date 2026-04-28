@@ -1,0 +1,19 @@
+{
+    "name": "miguelaugusto/aula08-composer",
+    "description": "Aula 08 BackEnd: aprendendo sobre composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Miguelaugusto\\Aula08Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miguel Augusto",
+            "email": "miguelaugustorocha2008@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.10"
+    }
+}
