@@ -1,0 +1,57 @@
+body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s ease;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+            z-index: 2;
+        }
+        .status-badge {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 25px;
+            border-radius: 50px;
+            color: white;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .ligado { background-color: #2ecc71; }    /* Verde */
+        .desligado { background-color: #e74c3c; } /* Vermelho */
+
+        /* Estilo do Alerta Crítico de Vazamento */
+        .alerta-vazamento {
+            display: none; /* Começa escondido */
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #ff9800;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 10px;
+            animation: piscar 1s infinite;
+        }
+
+        /* Animação para o aviso ficar piscando na tela */
+        @keyframes piscar {
+            0% { background-color: #e67e22; box-shadow: 0 0 10px #e67e22; }
+            50% { background-color: #d35400; box-shadow: 0 0 25px #d35400; }
+            100% { background-color: #e67e22; box-shadow: 0 0 10px #e67e22; }
+        }
+
+        /* Efeito de fundo de emergência no navegador */
+        .fundo-alerta {
+            background-color: #fadbd8 !important;
+        }
