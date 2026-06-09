@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação Residencial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automação Residencial</h1>
+        <p>Clique sobre os cómodos da planta para acender ou apagar as lâmpadas.</p>
+        
+        <button class="btn-conectar" id="btnConectar">Conectar ao Arduino</button>
+        <div id="status">Status: Desconectado da Placa</div>
+
+        <div class="mapa-container">
+            <svg width="100%" height="auto" viewBox="0 0 600 500" style="max-width: 550px;">
+                
+                <g id="group-dormitorio" class="comodo-group">
+                    <rect id="bg-dormitorio" class="comodo-bg" x="50" y="50" width="180" height="230" />
+                    <rect class="mobilia" x="70" y="65" width="110" height="120" rx="4" />
+                    <rect class="mobilia" x="80" y="72" width="40" height="20" rx="2" />
+                    <rect class="mobilia" x="130" y="72" width="40" height="20" rx="2" />
+                    <rect class="mobilia" x="60" y="235" width="140" height="35" />
+                    <text class="label-comodo" x="140" y="215">DORMITÓRIO</text>
+                    <g transform="translate(140, 150)">
+                        <circle class="luz-icone" cx="0" cy="0" r="10" />
+                        <rect class="luz-icone" x="-5" y="8" width="10" height="4" />
+                    </g>
+                </g>
+
+                <g id="group-banheiro" class="comodo-group">
+                    <rect id="bg-banheiro" class="comodo-bg" x="50" y="280" width="180" height="170" />
+                    <rect class="mobilia" x="55" y="285" width="55" height="55" /> <circle class="mobilia" cx="82" cy="312" r="3" />
+                    <rect class="mobilia" x="165" y="405" width="28" height="40" rx="6" /> <rect class="mobilia" x="65" y="415" width="55" height="30" rx="3" /> <text class="label-comodo" x="140" y="390">BANHEIRO</text>
+                    <g transform="translate(140, 345)">
+                        <circle class="luz-icone" cx="0" cy="0" r="10" />
+                        <rect class="luz-icone" x="-5" y="8" width="10" height="4" />
+                    </g>
+                </g>
+
+                <g id="group-cozinha" class="comodo-group">
+                    <rect id="bg-cozinha" class="comodo-bg" x="230" y="50" width="320" height="160" />
+                    <rect class="mobilia" x="240" y="55" width="200" height="35" /> <rect class="mobilia" x="465" y="55" width="50" height="50" rx="4" /> <circle class="mobilia" cx="270" cy="72" r="10" /> <text class="label-comodo" x="390" y="160">COZINHA</text>
+                    <g transform="translate(390, 110)">
+                        <circle class="luz-icone" cx="0" cy="0" r="10" />
+                        <rect class="luz-icone" x="-5" y="8" width="10" height="4" />
+                    </g>
+                </g>
+
+                <g id="group-sala" class="comodo-group">
+                    <rect id="bg-sala" class="comodo-bg" x="230" y="210" width="320" height="240" />
+                    <path class="mobilia" d="M 465,260 L 525,260 L 525,400 L 465,400 L 465,375 L 485,375 L 485,285 L 465,285 Z" /> <rect class="mobilia" x="260" y="310" width="12" height="90" rx="2" /> <line class="mobilia" x1="268" y1="330" x2="268" y2="380" style="stroke-width: 3;" /> <text class="label-comodo" x="390" y="270">SALA DE ESTAR</text>
+                    <g transform="translate(390, 330)">
+                        <circle class="luz-icone" cx="0" cy="0" r="10" />
+                        <rect class="luz-icone" x="-5" y="8" width="10" height="4" />
+                    </g>
+                </g>
+
+                <path class="parede" d="
+                    M 50,50 L 550,50 L 550,450 L 420,450 
+                    M 350,450 L 50,450 L 50,50
+                    M 230,50 L 230,175 
+                    M 230,225 L 230,295
+                    M 230,345 L 230,450
+                    M 50,280 L 230,280
+                    M 230,210 L 440,210
+                " />
+
+                <line class="porta" x1="350" y1="450" x2="350" y2="395" />
+                <path class="porta-raio" d="M 350,395 A 55,55 0 0,1 420,450" />
+                
+                <line class="porta" x1="230" y1="225" x2="185" y2="225" />
+                <path class="porta-raio" d="M 185,225 A 45,45 0 0,1 230,175" />
+
+                <line class="porta" x1="230" y1="295" x2="185" y2="295" />
+                <path class="porta-raio" d="M 230,345 A 45,45 0 0,1 185,295" />
+
+            </svg>
+        </div>
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
