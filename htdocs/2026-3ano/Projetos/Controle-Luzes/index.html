@@ -1,68 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home - Controle de Luzes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <title>Smart Home — Controle de Luzes</title>
+    <meta name="description"
+        content="Painel de controle residencial inteligente para automação de luzes via Arduino na rede local.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="dashboard">
-        <header>
-            <h1>Central de Iluminação</h1>
-            <div class="global-controls">
-                <button id="btn-all-on" onclick="controlAll(true)">Ativar Tudo</button>
-                <button id="btn-all-off" onclick="controlAll(false)">Desativar Tudo</button>
-            </div>
-        </header>
 
-        <main class="planta-container">
-            <!-- Sala -->
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <h1><span class="icon-title"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>Smart Home</h1>
+        <p>Painel de controle residencial na rede local</p>
+        <div id="status-indicator" class="status-indicator">
+            <span class="dot"></span>
+            <span class="status-text">Desconectado</span>
+        </div>
+    </header>
+
+    <!-- Botões Master -->
+    <div class="master-controls">
+        <button id="btn-ligar-todas" class="btn-master btn-ligar" onclick="ligarTodas()">
+            Ligar Todas
+        </button>
+        <button id="btn-desligar-todas" class="btn-master btn-desligar" onclick="desligarTodas()">
+            Desligar Todas
+        </button>
+    </div>
+
+    <!-- Layout Principal -->
+    <div class="app-layout">
+
+        <!-- Planta Interativa -->
+        <div class="planta-container">
+
+            <!-- Sala de Estar (Slider) -->
             <div id="sala" class="comodo sala">
+                <span class="comodo-icon"><svg class="energy-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
                 <span class="comodo-nome">Sala de Estar</span>
                 <span class="status-luz" id="pct-sala">0%</span>
                 <div class="container-slider">
-                    <input type="range" min="0" max="255" value="0" class="slider-controle" oninput="atualizarInterfaceSlider('S', this.value, 'sala', 'pct-sala', 'Sala de Estar')">
+                    <input type="range" id="slider-sala" min="0" max="255" value="0" class="slider-controle"
+                        oninput="ajustarSliderPorUsuario('S', this.value, 'sala', 'pct-sala')">
                 </div>
             </div>
 
-            <!-- Jardim (Automático) -->
-            <div id="jardim" class="comodo jardim">
-                <span class="comodo-nome">Jardim</span>
-                <span class="status-luz" id="status-jardim">Conectando...</span>
-            </div>
-
-            <!-- Cozinha -->
-            <div id="cozinha" class="comodo cozinha btn-comodo" onclick="alternarLuz('cozinha', 'C', 'c', 'Cozinha')">
+            <!-- Cozinha (Toggle) -->
+            <div id="cozinha" class="comodo cozinha btn-comodo" onclick="alternarLuz(this, 'C', 'c')">
+                <span class="comodo-icon"><svg class="energy-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
                 <span class="comodo-nome">Cozinha</span>
-                <span class="status-luz" id="status-cozinha">Apagada</span>
+                <span class="status-luz">Apagada</span>
             </div>
 
-            <!-- Banheiro -->
-            <div id="banheiro" class="comodo banheiro btn-comodo" onclick="alternarLuz('banheiro', 'B', 'b', 'Banheiro')">
+            <!-- Banheiro (Toggle) -->
+            <div id="banheiro" class="comodo banheiro btn-comodo" onclick="alternarLuz(this, 'B', 'b')">
+                <span class="comodo-icon"><svg class="energy-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
                 <span class="comodo-nome">Banheiro</span>
-                <span class="status-luz" id="status-banheiro">Apagada</span>
+                <span class="status-luz">Apagada</span>
             </div>
 
-            <!-- Quarto -->
+            <!-- Dormitório (Slider) -->
             <div id="quarto" class="comodo quarto">
+                <span class="comodo-icon"><svg class="energy-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
                 <span class="comodo-nome">Dormitório</span>
                 <span class="status-luz" id="pct-quarto">0%</span>
                 <div class="container-slider">
-                    <input type="range" min="0" max="255" value="0" class="slider-controle" oninput="atualizarInterfaceSlider('Q', this.value, 'quarto', 'pct-quarto', 'Dormitório')">
+                    <input type="range" id="slider-quarto" min="0" max="255" value="0" class="slider-controle"
+                        oninput="ajustarSliderPorUsuario('Q', this.value, 'quarto', 'pct-quarto')">
                 </div>
             </div>
-        </main>
 
-        <aside class="action-log">
-            <h2>Registro de Ações</h2>
-            <ul id="log-list">
-                <!-- Logs will be appended here via JS -->
-            </ul>
+            <!-- Jardim (Automático via LDR) -->
+            <div id="jardim" class="comodo jardim">
+                <span class="comodo-icon"><svg class="energy-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+                <span class="comodo-nome">Jardim</span>
+                <span class="status-luz" id="status-jardim">Apagado</span>
+            </div>
+
+        </div>
+
+        <!-- Painel de Log -->
+        <aside class="log-panel">
+            <div class="log-header">
+                <div class="log-header-left">
+                    <h2>Log de Ações</h2>
+                    <span id="log-count" class="log-count">0</span>
+                </div>
+                <button class="btn-clear-log" onclick="limparLog()">Limpar</button>
+            </div>
+            <div id="log-body" class="log-body">
+                <div class="log-empty">
+                    <span class="log-empty-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></span>
+                    <span class="log-empty-text">Nenhuma ação registrada</span>
+                </div>
+            </div>
         </aside>
+
     </div>
 
-    <script src="script.js"></script>
+    <footer class="app-footer">
+        Smart Home &mdash; Controle de Energia - Monitoramento de Luz &amp; Rede Local/Internet
+    </footer>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
