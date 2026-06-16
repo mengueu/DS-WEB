@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 
 # --- CONFIGURAÇÃO DA PORTA SERIAL ---
-porta_com = 'COM9' 
+porta_com = 'COM10' 
 
 try:
     # Aumentamos o timeout para evitar leituras incompletas da serial
@@ -44,7 +44,7 @@ def registrar_log(comando_completo, ip_origem):
     elif letra == 'S' and valor:
         pct = round((int(valor) / 255) * 100)
         if int(valor) > 0:
-            mensagem = f'Sala de Estar ajustada para {pct}%'
+            mensagem = f'Sala de Estar adjusted para {pct}%'
         else:
             mensagem = 'Sala de Estar desligada'
     elif letra == 'Q' and valor:
@@ -70,6 +70,15 @@ def registrar_log(comando_completo, ip_origem):
         log_global.pop()
 
 class ServidorWeb(BaseHTTPRequestHandler):
+    
+    def do_OPTIONS(self):
+        """Trata requisições de pré-envio do navegador (CORS) de forma automática."""
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS, POST")
+        self.send_header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type")
+        self.end_headers()
+
     def do_GET(self):
         url_analisada = urllib.parse.urlparse(self.path)
         
@@ -77,7 +86,7 @@ class ServidorWeb(BaseHTTPRequestHandler):
         if url_analisada.path == '/status':
             self.send_response(200)
             self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Origin", "*") # Permite acesso externo
             self.end_headers()
             
             # Limpa o lixo da linha serial, envia o pedido e lê a resposta imediata
@@ -102,7 +111,7 @@ class ServidorWeb(BaseHTTPRequestHandler):
         elif url_analisada.path == '/log':
             self.send_response(200)
             self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Origin", "*") # Permite acesso externo
             self.end_headers()
 
             parametros = urllib.parse.parse_qs(url_analisada.query)
@@ -112,21 +121,21 @@ class ServidorWeb(BaseHTTPRequestHandler):
                 log_global.clear()
                 self.wfile.write(json.dumps({'status': 'ok'}).encode('utf-8'))
             else:
-                # Retorna os logs. O cliente pode enviar ?desde=N para pegar só os novos
+                # Retorna os logs.
                 self.wfile.write(json.dumps(log_global).encode('utf-8'))
             
-        # --- ROTA DOS COMANDOS DA WEB ---
+        # --- ROTA DOS COMANDOS DA WEB ("/") ---
         else:
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
-            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Origin", "*") # Permite acesso externo
             self.end_headers()
             
             parametros = urllib.parse.parse_qs(url_analisada.query)
             if 'comando' in parametros:
                 comando_completo = parametros['comando'][0]
                 ip_cliente = self.client_address[0]
-                print(f"[{ip_cliente}] Comando: {comando_completo}")
+                print(f"[{ip_cliente}] Comando recebido: {comando_completo}")
                 
                 # Registra no log global ANTES de enviar para o Arduino
                 registrar_log(comando_completo, ip_cliente)

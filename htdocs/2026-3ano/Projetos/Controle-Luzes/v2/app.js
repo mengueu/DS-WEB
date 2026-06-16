@@ -1,8 +1,7 @@
 // ===== CONFIGURAÇÃO =====
-const IP_REDE = "10.139.26.7";
-/* 
-  Coloque o IP de rede local ou de seu Ipv4 
-  (para controlar suas luzes pela internet)
+const IP_REDE = "10.139.26.80"; 
+/* Usando "localhost" porque o servidor Python e o painel Web estão no mesmo PC.
+  (Se for controlar pelo celular, troque "localhost" pelo IP do seu PC na rede local).
 */
 
 // ===== ESTADO DA APLICAÇÃO =====
