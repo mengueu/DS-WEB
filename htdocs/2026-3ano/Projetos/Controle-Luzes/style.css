@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-main: #0a0a0a;
+    --bg-panel: #111111;
+    --border-color: #222222;
+    --text-main: #f0f0f0;
+    --text-muted: #888888;
+    --accent-on: #ffffff;
+    --accent-off: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.global-controls button {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.global-controls button:hover {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.planta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.sala { grid-column: 1 / 3; }
+.cozinha { grid-column: 3 / 4; }
+.banheiro { grid-column: 3 / 4; }
+.quarto { grid-column: 1 / 2; }
+.jardim { grid-column: 2 / 3; }
+
+/* Cômodos */
+.comodo {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+}
+
+.comodo-nome {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.status-luz {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    background: var(--accent-off);
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-comodo {
+    cursor: pointer;
+}
+
+.btn-comodo:hover {
+    border-color: #444444;
+}
+
+/* Estados Acesos */
+.aceso {
+    border-color: var(--accent-on);
+}
+
+.aceso .status-luz {
+    background: var(--accent-on);
+    color: var(--bg-main);
+}
+
+.aceso .comodo-nome {
+    color: var(--text-main);
+}
+
+/* Sliders */
+.container-slider {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.slider-controle {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    outline: none;
+}
+
+.slider-controle::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.slider-controle::-webkit-slider-thumb:hover {
+    background: var(--text-main);
+    transform: scale(1.2);
+}
+
+.aceso .slider-controle::-webkit-slider-thumb {
+    background: var(--accent-on);
+}
+
+/* Registro de Ações */
+.action-log {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-log h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+#log-list {
+    list-style: none;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 400px;
+    padding-right: 10px;
+}
+
+#log-list::-webkit-scrollbar {
+    width: 4px;
+}
+#log-list::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 2px;
+}
+
+#log-list li {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 300;
+}
+
+.log-time {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    .planta-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sala, .cozinha, .banheiro, .quarto, .jardim {
+        grid-column: span 1;
+    }
+}

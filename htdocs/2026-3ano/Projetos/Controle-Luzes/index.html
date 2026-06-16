@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home - Controle de Luzes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Central de Iluminação</h1>
+            <div class="global-controls">
+                <button id="btn-all-on" onclick="controlAll(true)">Ativar Tudo</button>
+                <button id="btn-all-off" onclick="controlAll(false)">Desativar Tudo</button>
+            </div>
+        </header>
+
+        <main class="planta-container">
+            <!-- Sala -->
+            <div id="sala" class="comodo sala">
+                <span class="comodo-nome">Sala de Estar</span>
+                <span class="status-luz" id="pct-sala">0%</span>
+                <div class="container-slider">
+                    <input type="range" min="0" max="255" value="0" class="slider-controle" oninput="atualizarInterfaceSlider('S', this.value, 'sala', 'pct-sala', 'Sala de Estar')">
+                </div>
+            </div>
+
+            <!-- Jardim (Automático) -->
+            <div id="jardim" class="comodo jardim">
+                <span class="comodo-nome">Jardim</span>
+                <span class="status-luz" id="status-jardim">Conectando...</span>
+            </div>
+
+            <!-- Cozinha -->
+            <div id="cozinha" class="comodo cozinha btn-comodo" onclick="alternarLuz('cozinha', 'C', 'c', 'Cozinha')">
+                <span class="comodo-nome">Cozinha</span>
+                <span class="status-luz" id="status-cozinha">Apagada</span>
+            </div>
+
+            <!-- Banheiro -->
+            <div id="banheiro" class="comodo banheiro btn-comodo" onclick="alternarLuz('banheiro', 'B', 'b', 'Banheiro')">
+                <span class="comodo-nome">Banheiro</span>
+                <span class="status-luz" id="status-banheiro">Apagada</span>
+            </div>
+
+            <!-- Quarto -->
+            <div id="quarto" class="comodo quarto">
+                <span class="comodo-nome">Dormitório</span>
+                <span class="status-luz" id="pct-quarto">0%</span>
+                <div class="container-slider">
+                    <input type="range" min="0" max="255" value="0" class="slider-controle" oninput="atualizarInterfaceSlider('Q', this.value, 'quarto', 'pct-quarto', 'Dormitório')">
+                </div>
+            </div>
+        </main>
+
+        <aside class="action-log">
+            <h2>Registro de Ações</h2>
+            <ul id="log-list">
+                <!-- Logs will be appended here via JS -->
+            </ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
