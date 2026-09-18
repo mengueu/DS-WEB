@@ -1,6 +1,6 @@
 // Variáveis de controle do tempo
         let tempoInicioDetectado = null;
-        const TEMPO_LIMITE_MS = 8000; // 8 segundos em milissegundos
+        const TEMPO_LIMITE_MS = 3000; // 3 segundos em milissegundos
 
         function atualizarDashboard() {
             fetch('conexao.php')

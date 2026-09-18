@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 
 # --- CONFIGURAÇÃO DA PORTA SERIAL ---
-porta_com = 'COM10' 
+porta_com = 'COM9' 
 
 try:
     # Aumentamos o timeout para evitar leituras incompletas da serial
