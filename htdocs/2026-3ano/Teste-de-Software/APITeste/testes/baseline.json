@@ -1,0 +1,28 @@
+{
+    "\/status": {
+        "codigo": 200,
+        "corpo": {
+            "status": "ok"
+        }
+    },
+    "\/produtos": {
+        "codigo": 200,
+        "corpo": [
+            {
+                "id": 1,
+                "nome": "Teclado",
+                "preco": 150
+            },
+            {
+                "id": 2,
+                "nome": "Mouse",
+                "preco": 80
+            },
+            {
+                "id": 3,
+                "nome": "Monitor",
+                "preco": 900
+            }
+        ]
+    }
+}
