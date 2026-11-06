@@ -1,0 +1,4 @@
+[2026-11-06 16:29:29] [IP: ::1] - LOGIN FALHO: Tentativa de acesso negada para o e-mail: admin@senai.br.
+[2026-11-06 16:29:44] [IP: ::1] - LOGIN FALHO: Tentativa de acesso negada para o e-mail: admin@senai.br.
+[2026-11-06 16:29:54] [IP: ::1] - LOGIN FALHO: Tentativa de acesso negada para o e-mail: admin@senai.br.
+[2026-11-06 17:33:34] [IP: ::1] - LOGIN FALHO: Tentativa de acesso negada para o e-mail: admin@senai.br.
